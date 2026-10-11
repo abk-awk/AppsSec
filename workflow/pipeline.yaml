@@ -25,7 +25,7 @@ jobs:
           docker build -t $IMAGE:${{ github.sha }} .
           echo "digest=$(docker inspect --format='{{index .RepoDigests 0}}' $IMAGE:${{ github.sha }} 2>/dev/null || echo 'local')" >> $GITHUB_OUTPUT
 
-  # ─────────────────────────────────────────────
+  # ───────────────────────────────────────────
   sbom:
     name: SBOM Generation (Syft → CycloneDX)
     runs-on: ubuntu-latest
