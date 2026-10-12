@@ -216,7 +216,7 @@ jobs:
           exit 1
 
       - name: ZAP Full Scan
-        uses: zaproxy/action-full-scan@v0.10.0
+        uses: zaproxy/action-full-scan@v0.12.0
         with:
           target: http://localhost:3000
           rules_file_name: .zap/rules.tsv
